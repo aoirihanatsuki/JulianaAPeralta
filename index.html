@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#130a21">
+    <title>Juliana Francesca A. Peralta - Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/src/index.css">
+</head>
+<body>
+<header>
+    <div class="profile-avatar">
+        <img src="/pfp.jpg" alt="Juliana Francesca A. Peralta profile picture"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <i class="fa-solid fa-user-graduate avatar-fallback" aria-hidden="true"></i>
+    </div>
+    <h1>Juliana Francesca A. Peralta</h1>
+    <p>4th Year Student | Bachelor of Science in Computer Engineering</p>
+</header>
+
+<nav class="nav-container" aria-label="Main navigation">
+    <button class="nav-btn active" type="button" data-section="info-section">View Information</button>
+    <button class="nav-btn" type="button" data-section="certificates-section">View Certificates &amp; Experiences</button>
+    <button class="nav-btn" type="button" data-section="resume-section">View Curriculum Vitae</button>
+</nav>
+
+<main>
+    <section id="info-section" class="section-content active">
+        <div class="info-card">
+            <h2>About Me</h2>
+
+            <div class="info-grid">
+                <div class="info-item">
+                    <h3>Full Name</h3>
+                    <p>Juliana Francesca A. Peralta</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Birthday</h3>
+                    <p>July 18, 2005</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Address</h3>
+                    <p>Isabela, Philippines</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Education</h3>
+                    <p>BS Computer Engineering (4th Year)</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Technical Skills</h3>
+                    <div class="tags">
+                        <span class="tag">C</span>
+                        <span class="tag">C++</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Hardware Troubleshooting</span>
+                        <span class="tag">Embedded Systems</span>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <h3>Hobbies</h3>
+                    <div class="tags">
+                        <span class="tag">Coding</span>
+                        <span class="tag">Reading</span>
+                        <span class="tag">Gaming</span>
+                        <span class="tag">Music</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates-section" class="section-content">
+        <div class="feed-heading">
+            <h2>Certificates &amp; Experiences</h2>
+            <p>Certificates and experiences in an Instagram-inspired feed.</p>
+        </div>
+
+        <h3 class="feed-section-title">Certificates</h3>
+        <div id="certificates-feed" class="feed-grid" aria-label="Certificates"></div>
+
+        <h3 class="feed-section-title">Experiences</h3>
+        <div id="experiences-feed" class="feed-grid" aria-label="Experiences"></div>
+    </section>
+
+    <section id="resume-section" class="section-content">
+        <article class="resume-card">
+            <div class="resume-header-row">
+                <div class="resume-title-group">
+                    <h2>Curriculum Vitae</h2>
+                    <p class="resume-subtitle">Bachelor of Science in Computer Engineering</p>
+                </div>
+                <div class="resume-actions-group">
+                    <a href="/cv.pdf" download="Juliana_Peralta_CV.pdf" id="download-cv-btn" class="resume-action-btn">
+                        <i class="fa-solid fa-download" aria-hidden="true"></i> Download CV
+                    </a>
+                    <button id="print-cv-btn" class="resume-action-btn" type="button">
+                        <i class="fa-solid fa-print" aria-hidden="true"></i> Print CV
+                    </button>
+                </div>
+            </div>
+
+            <div class="resume-block">
+                <h3>
+                    <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                    Education
+                </h3>
+
+                <div class="resume-item">
+                    <h4>Cagayan State University - Carig Campus</h4>
+                    <span class="resume-date">2023 - Present</span>
+                </div>
+
+                <div class="resume-item">
+                    <h4>San Mariano National High School - Main Campus</h4>
+                    <span class="resume-date">Senior High | 2011 - 2023</span>
+                </div>
+
+                <div class="resume-item">
+                    <h4>San Mariano National High School - Main Campus</h4>
+                    <span class="resume-date">Junior High | 2017 - 2021</span>
+                </div>
+
+                <div class="resume-item">
+                    <h4>San Mariano Central School SPED Center</h4>
+                    <span class="resume-date">Elementary | 2011 - 2017</span>
+                </div>
+            </div>
+
+            <div class="resume-block">
+                <h3>
+                    <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+                    Technical Experience &amp; Projects
+                </h3>
+
+                <ul class="resume-list">
+                    <li>Completed extensive coursework in C, C++, Python, and Java, emphasizing programming logic, software design principles, and code optimization.</li>
+
+                    <li>Applied data structures, algorithm development, and object-oriented programming (OOP) in laboratory projects and hands-on programming exercises.</li>
+
+                    <li>Served as a developer in a team-based project, contributing to system design, coding, testing, and debugging to ensure efficient, high-quality performance.</li>
+
+                    <li>Gained hands-on experience in computer hardware fundamentals, including component identification, system installation, and basic troubleshooting.</li>
+
+                    <li>Acquired foundational knowledge in microprocessors, embedded systems, digital logic circuits, and electronics through laboratory work.</li>
+
+                    <li>Collaborated with team members to analyze requirements, resolve software and hardware issues, and implement effective solutions.</li>
+                </ul>
+            </div>
+
+            <div class="resume-block">
+                <h3>
+                    <i class="fa-solid fa-award" aria-hidden="true"></i>
+                    Key Skills
+                </h3>
+
+                <div class="skills-columns">
+                    <div class="skills-panel">
+                        <h4>Technical Skills</h4>
+                        <ul class="resume-list">
+                            <li>Programming Languages: C, C++, Java, and Python</li>
+                            <li>Computer Hardware Troubleshooting</li>
+                            <li>Knowledge of Microprocessors and Embedded Systems</li>
+                            <li>Basic Digital Logic Circuits and Electronics</li>
+                        </ul>
+                    </div>
+
+                    <div class="skills-panel">
+                        <h4>Soft Skills</h4>
+                        <ul class="resume-list">
+                            <li>Strong Communication Skills</li>
+                            <li>Fast Learner with a Hands-on Learning Approach</li>
+                            <li>Teamwork and Collaboration</li>
+                            <li>Time Management and Organizational Skills</li>
+                            <li>Problem-Solving and Critical Thinking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+</main>
+
+<footer>
+    <p>© <span id="current-year"></span> Juliana Francesca A. Peralta</p>
+</footer>
+
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>

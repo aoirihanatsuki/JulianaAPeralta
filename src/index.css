@@ -1,0 +1,653 @@
+/* GLOBAL THEME AND RESET */
+:root {
+    --bg-dark: #ffffff;
+    --bg-card: #ffffff;
+    --purple-primary: #8a2be2;
+    --purple-light: #9b4dca;
+    --gold-primary: #8a2be2; /* Replaced gold with purple accents */
+    --gold-light: #6a1b9a;
+    --gold-border: #8a2be2;
+    --white: #000000; /* Swapped to dark text for readability on white */
+    --text-gray: #444444;
+    --transition: all 0.25s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    padding-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    color: #000000;
+    font-family: "Poppins", sans-serif;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button:focus-visible,
+input:focus-visible {
+    outline: 2px solid var(--purple-primary);
+    outline-offset: 3px;
+}
+
+/* HEADER AND PROFILE PICTURE */
+header {
+    text-align: center;
+    padding: 52px 20px 35px;
+    background: linear-gradient(
+            180deg,
+            rgba(138, 43, 226, 0.08),
+            rgba(255, 255, 255, 1)
+    );
+}
+
+.profile-avatar {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 18px;
+    border: 3px solid var(--purple-primary);
+    border-radius: 50%;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    background: #ffffff;
+    box-shadow: 0 0 22px rgba(138, 43, 226, 0.15);
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.avatar-fallback {
+    display: none;
+    font-size: 3rem;
+    color: var(--purple-primary);
+}
+
+header h1 {
+    font-size: clamp(1.5rem, 4vw, 2.15rem);
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #000000;
+}
+
+header p {
+    color: var(--purple-light);
+    font-size: 0.98rem;
+    font-weight: 500;
+}
+
+/* NAVIGATION BUTTONS */
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 26px 16px 30px;
+}
+
+.nav-btn {
+    padding: 11px 22px;
+    border: 2px solid var(--purple-primary);
+    border-radius: 25px;
+    background: #ffffff;
+    color: var(--purple-primary);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.92rem;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+    background: var(--purple-primary);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 18px rgba(138, 43, 226, 0.25);
+}
+
+/* MAIN SECTIONS */
+main {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+.section-content {
+    display: none;
+    animation: fade-in 0.25s ease;
+}
+
+.section-content.active {
+    display: block;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0.35;
+        transform: translateY(4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* INFORMATION CARD */
+.info-card,
+.resume-card {
+    background: #ffffff;
+    border: 2px solid var(--purple-primary);
+    border-radius: 16px;
+    padding: clamp(20px, 4vw, 34px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.info-card h2,
+.resume-card > h2,
+.feed-heading h2 {
+    color: var(--purple-primary);
+    font-size: 1.8rem;
+    margin-bottom: 22px;
+}
+
+.info-card h2 {
+    border-bottom: 2px solid var(--purple-primary);
+    padding-bottom: 10px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 250px), 1fr)
+  );
+    gap: 16px;
+}
+
+.info-item {
+    padding: 16px;
+    border-radius: 10px;
+    background: #faf5ff;
+    border-left: 4px solid var(--purple-primary);
+}
+
+.info-item h3 {
+    color: var(--purple-light);
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.info-item p {
+    overflow-wrap: anywhere;
+    color: #333333;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.tag {
+    padding: 4px 11px;
+    border-radius: 16px;
+    background: #f3e8ff;
+    color: var(--purple-primary);
+    border: 1px solid var(--purple-primary);
+    font-size: 0.82rem;
+}
+
+/* CERTIFICATES AND EXPERIENCES */
+.feed-heading {
+    text-align: center;
+    margin: 4px 0 26px;
+}
+
+.feed-heading h2 {
+    margin-bottom: 6px;
+}
+
+.feed-heading p {
+    color: var(--text-gray);
+    font-size: 0.92rem;
+}
+
+.feed-section-title {
+    color: var(--purple-primary);
+    margin: 26px 0 14px;
+    font-size: 1.25rem;
+}
+
+.feed-grid {
+    display: grid;
+    grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 290px), 1fr)
+  );
+    gap: 22px;
+    align-items: start;
+}
+
+.insta-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 2px solid var(--purple-primary);
+    border-radius: 13px;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+}
+
+.insta-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(138, 43, 226, 0.15);
+}
+
+.insta-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    border-bottom: 1px solid rgba(138, 43, 226, 0.2);
+}
+
+.insta-header .avatar {
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #f3e8ff;
+    color: var(--purple-primary);
+    border: 2px solid var(--purple-primary);
+    font-weight: 700;
+}
+
+.username {
+    color: #000000;
+    font-weight: 600;
+    font-size: 0.9rem;
+    overflow-wrap: anywhere;
+}
+
+.post-type {
+    margin-left: auto;
+    color: var(--purple-light);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.insta-image-wrap {
+    width: 100%;
+    height: 300px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    background: #f8fafc;
+    border-bottom: 1px solid rgba(138, 43, 226, 0.2);
+}
+
+.insta-image-wrap img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center;
+    flex-shrink: 0;
+}
+
+.image-missing {
+    display: none;
+    max-width: 100%;
+    color: var(--purple-primary);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85rem;
+    overflow-wrap: anywhere;
+    box-sizing: border-box;
+}
+
+/* Instagram action buttons */
+.insta-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 10px 14px 4px;
+    font-size: 1.35rem;
+}
+
+.action-icon {
+    border: 0;
+    background: transparent;
+    color: #000000;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.action-icon:hover {
+    color: var(--purple-primary);
+    transform: scale(1.08);
+}
+
+.action-icon.liked {
+    color: #ff4b65;
+}
+
+/* Likes and captions */
+.insta-likes {
+    padding: 2px 14px 0;
+    color: var(--purple-primary);
+    font-weight: 600;
+    font-size: 0.86rem;
+}
+
+.insta-caption {
+    padding: 8px 14px 14px;
+    font-size: 0.88rem;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+    color: #333333;
+}
+
+.insta-caption .username {
+    margin-right: 5px;
+}
+
+/* Comments */
+.insta-comments {
+    padding: 0 14px 12px;
+    font-size: 0.82rem;
+}
+
+.comment {
+    margin-top: 7px;
+    overflow-wrap: anywhere;
+    color: var(--text-gray);
+}
+
+.comment strong {
+    color: #000000;
+    margin-right: 4px;
+}
+
+.comment-input-container {
+    display: flex;
+    gap: 10px;
+    padding: 10px 14px;
+    border-top: 1px solid rgba(138, 43, 226, 0.2);
+}
+
+.comment-input-container input {
+    min-width: 0;
+    flex: 1;
+    border: 0;
+    outline: 0;
+    color: #000000;
+    background: transparent;
+    font-size: 0.85rem;
+}
+
+.comment-input-container input::placeholder {
+    color: #888888;
+}
+
+.comment-input-container button {
+    border: 0;
+    background: transparent;
+    color: var(--purple-primary);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.comment-input-container button:hover {
+    color: var(--purple-light);
+}
+
+/* CURRICULUM VITAE & TOP ACTION BUTTONS */
+.resume-card {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.resume-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.resume-title-group h2 {
+    color: var(--purple-primary);
+    font-size: 1.8rem;
+    margin-bottom: 4px;
+}
+
+.resume-subtitle {
+    color: var(--purple-light);
+    margin-bottom: 0;
+}
+
+.resume-actions-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+}
+
+.resume-action-btn {
+    background-color: var(--purple-primary);
+    color: #ffffff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.88rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: var(--transition);
+    box-shadow: 0 4px 12px rgba(138, 43, 226, 0.2);
+}
+
+.resume-action-btn:hover {
+    background-color: var(--purple-light);
+    transform: translateY(-2px);
+    color: #ffffff;
+}
+
+.resume-block {
+    margin-bottom: 28px;
+}
+
+.resume-block h3 {
+    color: var(--purple-primary);
+    font-size: 1.15rem;
+    border-bottom: 1px solid rgba(138, 43, 226, 0.3);
+    padding-bottom: 8px;
+    margin-bottom: 14px;
+}
+
+.resume-block h3 i {
+    margin-right: 7px;
+}
+
+/* Education cards */
+.resume-item {
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(138, 43, 226, 0.3);
+    border-left: 3px solid var(--purple-primary);
+    border-radius: 8px;
+    background: #faf5ff;
+    overflow-wrap: anywhere;
+    color: #333333;
+}
+
+.resume-item h4 {
+    font-size: 0.98rem;
+    margin-bottom: 4px;
+    color: #000000;
+}
+
+.resume-date {
+    color: var(--purple-light);
+    font-size: 0.85rem;
+}
+
+/* Technical Experience & Projects */
+.resume-list {
+    list-style-position: inside;
+    padding-left: 0;
+    color: #333333;
+    line-height: 1.7;
+}
+
+.resume-list li {
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(138, 43, 226, 0.3);
+    border-left: 3px solid var(--purple-primary);
+    border-radius: 8px;
+    background: #faf5ff;
+    overflow-wrap: anywhere;
+}
+
+.resume-list li::marker {
+    color: var(--purple-primary);
+}
+
+/* =========================================
+   KEY SKILLS
+========================================= */
+
+.skills-columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.skills-panel {
+    min-width: 0;
+    padding: 16px;
+    border: 1px solid rgba(138, 43, 226, 0.3);
+    border-left: 3px solid var(--purple-primary);
+    border-radius: 8px;
+    background: #faf5ff;
+    overflow-wrap: anywhere;
+}
+
+.skills-panel h4 {
+    color: var(--purple-primary);
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(138, 43, 226, 0.2);
+}
+
+.skills-panel ul {
+    list-style-position: inside;
+    padding-left: 0;
+    color: #333333;
+    line-height: 1.7;
+}
+
+.skills-panel li {
+    padding: 12px 14px;
+    margin-bottom: 8px;
+    border: 1px solid rgba(138, 43, 226, 0.3);
+    border-left: 3px solid var(--purple-primary);
+    border-radius: 8px;
+    background: #ffffff;
+    overflow-wrap: anywhere;
+}
+
+.skills-panel li::marker {
+    color: var(--purple-primary);
+}
+
+/* FOOTER AND RESPONSIVE DESIGN */
+footer {
+    text-align: center;
+    color: #666666;
+    font-size: 0.78rem;
+    padding: 28px 16px 0;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding-top: 36px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 20px;
+    }
+
+    .nav-btn {
+        width: 100%;
+    }
+
+    main {
+        padding: 0 12px;
+    }
+
+    .feed-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .insta-image-wrap {
+        height: 280px;
+    }
+
+    .resume-header-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .resume-actions-group {
+        flex-direction: column;
+    }
+
+    .resume-action-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
