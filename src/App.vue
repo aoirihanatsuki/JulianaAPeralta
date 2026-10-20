@@ -1,31 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-
 const base = import.meta.env.BASE_URL
-
-const certificates = ref([
-  { id: 1, title: 'Certificate 1', image: `${base}cer1.jpg`, desc: '#CERTIFICATE 1 - 2025 International Conference.' },
-  { id: 2, title: 'Certificate 2', image: `${base}cer2.jpg`, desc: '#CERTIFICATE 2 - 2025 International Conference.' },
-  { id: 3, title: 'Certificate 3', image: `${base}cer3.jpg`, desc: '#CERTIFICATE 3 - 2025 International Conference.' },
-  { id: 4, title: 'Certificate 4', image: `${base}cer4.jpg`, desc: '#CERTIFICATE 4 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
-  { id: 5, title: 'Certificate 5', image: `${base}cer5.jpg`, desc: '#CERTIFICATE 5 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
-  { id: 6, title: 'Certificate 6', image: `${base}cer6.jpg`, desc: '#CERTIFICATE 6 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
-  { id: 7, title: 'Certificate 7', image: `${base}cer7.jpg`, desc: '#CERTIFICATE 7 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
-  { id: 8, title: 'Certificate 8', image: `${base}cer8.jpg`, desc: '#CERTIFICATE 8 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
-  { id: 9, title: 'Certificate 9', image: `${base}cer9.jpg`, desc: '#CERTIFICATE 9 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
-  { id: 10, title: 'Certificate 10', image: `${base}cer10.jpg`, desc: '#CERTIFICATE 10 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
-  { id: 11, title: 'Certificate 11', image: `${base}cer11.jpg`, desc: '#CERTIFICATE 11 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
-  { id: 12, title: 'Certificate 12', image: `${base}cer12.jpg`, desc: '#CERTIFICATE 12 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
-  { id: 13, title: 'Certificate 13', image: `${base}cer13.jpg`, desc: '#CERTIFICATE 13 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
-])
-
-const experiences = ref([
-  { id: 1, title: 'Experience 1', image: `${base}exp1.jpg`, desc: '#EXPERIENCE 1 - First Pin and Hard Hat! First Batch' },
-  { id: 2, title: 'Experience 2', image: `${base}exp2.jpg`, desc: '#EXPERIENCE 2 - On the Job Training in Mandaluyong, Picture with our supervisor' },
-  { id: 3, title: 'Experience 3', image: `${base}exp3.jpg`, desc: '#EXPERIENCE 3 - Wireframing, UI/UX, #OJT' },
-  { id: 4, title: 'Experience 4', image: `${base}exp4.jpg`, desc: '#EXPERIENCE 4 - NC2 Training 2026' },
-  { id: 5, title: 'Experience 5', image: `${base}exp5.jpg`, desc: '#EXPERIENCE 5 - Regional Information Technology and Engineering Summit 2026' },
-])
 </script>
 
 <template>
@@ -44,11 +18,85 @@ const experiences = ref([
     <section class="section-block">
       <h2>Certificates</h2>
       <div class="grid-container">
-        <div v-for="cert in certificates" :key="cert.id" class="card">
-          <h3>{{ cert.title }}</h3>
-          <img :src="cert.image" :alt="cert.title" class="content-img" />
-          <p class="caption">{{ cert.desc }}</p>
+        
+        <div class="card">
+          <h3>Certificate 1</h3>
+          <img :src="`${base}cer1.jpg`" alt="Certificate 1" class="content-img" />
+          <p class="caption">#CERTIFICATE 1 - 2025 International Conference.</p>
         </div>
+
+        <div class="card">
+          <h3>Certificate 2</h3>
+          <img :src="`${base}cer2.jpg`" alt="Certificate 2" class="content-img" />
+          <p class="caption">#CERTIFICATE 2 - 2025 International Conference.</p>
+        </div>
+
+        <div class="card">
+          <h3>Certificate 3</h3>
+          <img :src="`${base}cer3.jpg`" alt="Certificate 3" class="content-img" />
+          <p class="caption">#CERTIFICATE 3 - 2025 International Conference.</p>
+        </div>
+
+        <div class="card">
+          <h3>Certificate 4</h3>
+          <img :src="`${base}cer4.jpg`" alt="Certificate 4" class="content-img" />
+          <p class="caption">#CERTIFICATE 4 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.</p>
+        </div>
+
+        <div class="card">
+          <h3>Certificate 5</h3>
+          <img :src="`${base}cer5.jpg`" alt="Certificate 5" class="content-img" />
+          <p class="caption">#CERTIFICATE 5 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.</p>
+        </div>
+
+        <div class="card">
+          <h3>Certificate 6</h3>
+          <img :src="`${base}cer6.jpg`" alt="Certificate 6" class="content-img" />
+          <p class="caption">#CERTIFICATE 6 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.</p>
+        </div>
+
+        <div class="card">
+          <h3>Certificate 7</h3>
+          <img :src="`${base}cer7.jpg`" alt="Certificate 7" class="content-img" />
+          <p class="caption">#CERTIFICATE 7 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.</p>
+        </div>
+
+        <div class="card">
+          <h3>Certificate 8</h3>
+          <img :src="`${base}cer8.jpg`" alt="Certificate 8" class="content-img" />
+          <p class="caption">#CERTIFICATE 8 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.</p>
+        </div>
+
+        <div class="card">
+          <h3>Certificate 9</h3>
+          <img :src="`${base}cer9.jpg`" alt="Certificate 9" class="content-img" />
+          <p class="caption">#CERTIFICATE 9 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.</p>
+        </div>
+
+        <div class="card">
+          <h3>Certificate 10</h3>
+          <img :src="`${base}cer10.jpg`" alt="Certificate 10" class="content-img" />
+          <p class="caption">#CERTIFICATE 10 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.</p>
+        </div>
+
+        <div class="card">
+          <h3>Certificate 11</h3>
+          <img :src="`${base}cer11.jpg`" alt="Certificate 11" class="content-img" />
+          <p class="caption">#CERTIFICATE 11 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.</p>
+        </div>
+
+        <div class="card">
+          <h3>Certificate 12</h3>
+          <img :src="`${base}cer12.jpg`" alt="Certificate 12" class="content-img" />
+          <p class="caption">#CERTIFICATE 12 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.</p>
+        </div>
+
+        <div class="card">
+          <h3>Certificate 13</h3>
+          <img :src="`${base}cer13.jpg`" alt="Certificate 13" class="content-img" />
+          <p class="caption">#CERTIFICATE 13 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.</p>
+        </div>
+
       </div>
     </section>
 
@@ -56,11 +104,37 @@ const experiences = ref([
     <section class="section-block">
       <h2>Experiences</h2>
       <div class="grid-container">
-        <div v-for="exp in experiences" :key="exp.id" class="card">
-          <h3>{{ exp.title }}</h3>
-          <img :src="exp.image" :alt="exp.title" class="content-img" />
-          <p class="caption">{{ exp.desc }}</p>
+
+        <div class="card">
+          <h3>Experience 1</h3>
+          <img :src="`${base}exp1.jpg`" alt="Experience 1" class="content-img" />
+          <p class="caption">#EXPERIENCE 1 - First Pin and Hard Hat! First Batch</p>
         </div>
+
+        <div class="card">
+          <h3>Experience 2</h3>
+          <img :src="`${base}exp2.jpg`" alt="Experience 2" class="content-img" />
+          <p class="caption">#EXPERIENCE 2 - On the Job Training in Mandaluyong, Picture with our supervisor</p>
+        </div>
+
+        <div class="card">
+          <h3>Experience 3</h3>
+          <img :src="`${base}exp3.jpg`" alt="Experience 3" class="content-img" />
+          <p class="caption">#EXPERIENCE 3 - Wireframing, UI/UX, #OJT</p>
+        </div>
+
+        <div class="card">
+          <h3>Experience 4</h3>
+          <img :src="`${base}exp4.jpg`" alt="Experience 4" class="content-img" />
+          <p class="caption">#EXPERIENCE 4 - NC2 Training 2026</p>
+        </div>
+
+        <div class="card">
+          <h3>Experience 5</h3>
+          <img :src="`${base}exp5.jpg`" alt="Experience 5" class="content-img" />
+          <p class="caption">#EXPERIENCE 5 - Regional Information Technology and Engineering Summit 2026</p>
+        </div>
+
       </div>
     </section>
   </main>
