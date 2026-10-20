@@ -1,12 +1,23 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-// Certificate list pointing cleanly to your assets in the public folder
+// Base URL automatically handles the /JulianaAPeralta/ prefix on GitHub Pages
+const base = import.meta.env.BASE_URL
+
 const certificates = ref([
-  { id: 1, title: 'Certificate 1', image: 'Cer1.jpg' },
-  { id: 2, title: 'Certificate 2', image: 'Cer2.jpg' },
-  { id: 3, title: 'Certificate 3', image: 'Cer3.jpg' },
-  { id: 4, title: 'Certificate 4', image: 'Cer4.jpg' },
+  { id: 1, title: 'Certificate 1', image: `${base}Cer1.jpg` },
+  { id: 2, title: 'Certificate 2', image: `${base}Cer2.jpg` },
+  { id: 3, title: 'Certificate 3', image: `${base}Cer3.jpg` },
+  { id: 4, title: 'Certificate 4', image: `${base}Cer4.jpg` },
+  { id: 5, title: 'Certificate 5', image: `${base}Cer5.jpg` },
+  { id: 6, title: 'Certificate 6', image: `${base}Cer6.jpg` },
+  { id: 7, title: 'Certificate 7', image: `${base}Cer7.jpg` },
+  { id: 8, title: 'Certificate 8', image: `${base}Cer8.jpg` },
+  { id: 9, title: 'Certificate 9', image: `${base}Cer9.jpg` },
+  { id: 10, title: 'Certificate 10', image: `${base}Cer10.jpg` },
+  { id: 11, title: 'Certificate 11', image: `${base}Cer11.jpg` },
+  { id: 12, title: 'Certificate 12', image: `${base}Cer12.jpg` },
+  { id: 13, title: 'Certificate 13', image: `${base}Cer13.jpg` },
 ])
 </script>
 
@@ -15,10 +26,10 @@ const certificates = ref([
     <!-- Hero Section / Profile -->
     <section class="hero-section">
       <div class="profile-card">
-        <img src="./pfp.jpg" alt="Juliana Francesca A. Peralta" class="profile-img" />
+        <img :src="`${base}pfp.jpg`" alt="Juliana Francesca A. Peralta" class="profile-img" />
         <h1>Juliana Francesca A. Peralta</h1>
         <p class="tagline">Frontend Developer & UI/UX Enthusiast</p>
-        <a href="./cv.pdf" download="Juliana_Peralta_CV.pdf" class="resume-action-btn">Download CV</a>
+        <a :href="`${base}cv.pdf`" download="Juliana_Peralta_CV.pdf" class="resume-action-btn">Download CV</a>
       </div>
     </section>
 
@@ -27,7 +38,6 @@ const certificates = ref([
       <h2>Certificates</h2>
       <div id="certificates-feed" class="certificates-grid">
         <div v-for="cert in certificates" :key="cert.id" class="cert-card">
-          <!-- Using relative path so it loads correctly on GitHub Pages -->
           <img :src="cert.image" :alt="cert.title" class="cert-img" />
           <p>{{ cert.title }}</p>
         </div>
