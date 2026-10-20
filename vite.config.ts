@@ -5,7 +5,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/JulianaAPeralta/', // <-- Added this line for GitHub Pages subdirectory
+  base: '/JulianaAPeralta/', // Crucial for GitHub Pages subfolder resolution
   plugins: [
     vue(),
     vueDevTools(),
