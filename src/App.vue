@@ -4,27 +4,27 @@ import { ref } from 'vue'
 const base = import.meta.env.BASE_URL
 
 const certificates = ref([
-  { id: 1, title: 'Certificate 1', image: `${base}Cer1.jpg`, desc: '#CERTIFICATE 1 - 2025 International Conference.' },
-  { id: 2, title: 'Certificate 2', image: `${base}Cer2.jpg`, desc: '#CERTIFICATE 2 - 2025 International Conference.' },
-  { id: 3, title: 'Certificate 3', image: `${base}Cer3.jpg`, desc: '#CERTIFICATE 3 - 2025 International Conference.' },
-  { id: 4, title: 'Certificate 4', image: `${base}Cer4.jpg`, desc: '#CERTIFICATE 4 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
-  { id: 5, title: 'Certificate 5', image: `${base}Cer5.jpg`, desc: '#CERTIFICATE 5 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
-  { id: 6, title: 'Certificate 6', image: `${base}Cer6.jpg`, desc: '#CERTIFICATE 6 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
-  { id: 7, title: 'Certificate 7', image: `${base}Cer7.jpg`, desc: '#CERTIFICATE 7 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
-  { id: 8, title: 'Certificate 8', image: `${base}Cer8.jpg`, desc: '#CERTIFICATE 8 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
-  { id: 9, title: 'Certificate 9', image: `${base}Cer9.jpg`, desc: '#CERTIFICATE 9 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
-  { id: 10, title: 'Certificate 10', image: `${base}Cer10.jpg`, desc: '#CERTIFICATE 10 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
-  { id: 11, title: 'Certificate 11', image: `${base}Cer11.jpg`, desc: '#CERTIFICATE 11 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
-  { id: 12, title: 'Certificate 12', image: `${base}Cer12.jpg`, desc: '#CERTIFICATE 12 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
-  { id: 13, title: 'Certificate 13', image: `${base}Cer13.jpg`, desc: '#CERTIFICATE 13 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
+  { id: 1, title: 'Certificate 1', image: '/JulianaAPeralta/Cer1.jpg', desc: '#CERTIFICATE 1 - 2025 International Conference.' },
+  { id: 2, title: 'Certificate 2', image: '/JulianaAPeralta/Cer2.jpg', desc: '#CERTIFICATE 2 - 2025 International Conference.' },
+  { id: 3, title: 'Certificate 3', image: '/JulianaAPeralta/Cer3.jpg', desc: '#CERTIFICATE 3 - 2025 International Conference.' },
+  { id: 4, title: 'Certificate 4', image: '/JulianaAPeralta/Cer4.jpg', desc: '#CERTIFICATE 4 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
+  { id: 5, title: 'Certificate 5', image: '/JulianaAPeralta/Cer5.jpg', desc: '#CERTIFICATE 5 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
+  { id: 6, title: 'Certificate 6', image: '/JulianaAPeralta/Cer6.jpg', desc: '#CERTIFICATE 6 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
+  { id: 7, title: 'Certificate 7', image: '/JulianaAPeralta/Cer7.jpg', desc: '#CERTIFICATE 7 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
+  { id: 8, title: 'Certificate 8', image: '/JulianaAPeralta/Cer8.jpg', desc: '#CERTIFICATE 8 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
+  { id: 9, title: 'Certificate 9', image: '/JulianaAPeralta/Cer9.jpg', desc: '#CERTIFICATE 9 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
+  { id: 10, title: 'Certificate 10', image: '/JulianaAPeralta/Cer10.jpg', desc: '#CERTIFICATE 10 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
+  { id: 11, title: 'Certificate 11', image: '/JulianaAPeralta/Cer11.jpg', desc: '#CERTIFICATE 11 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
+  { id: 12, title: 'Certificate 12', image: '/JulianaAPeralta/Cer12.jpg', desc: '#CERTIFICATE 12 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
+  { id: 13, title: 'Certificate 13', image: '/JulianaAPeralta/Cer13.jpg', desc: '#CERTIFICATE 13 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
 ])
 
 const experiences = ref([
-  { id: 1, title: 'Experience 1', image: `${base}Exp1.jpg`, desc: '#EXPERIENCE 1 - First Pin and Hard Hat! First Batch' },
-  { id: 2, title: 'Experience 2', image: `${base}Exp2.jpg`, desc: '#EXPERIENCE 2 - On the Job Training in Mandaluyong, Picture with our supervisor' },
-  { id: 3, title: 'Experience 3', image: `${base}Exp3.jpg`, desc: '#EXPERIENCE 3 - Wireframing, UI/UX, #OJT' },
-  { id: 4, title: 'Experience 4', image: `${base}Exp4.jpg`, desc: '#EXPERIENCE 4 - NC2 Training 2026' },
-  { id: 5, title: 'Experience 5', image: `${base}Exp5.jpg`, desc: '#EXPERIENCE 5 - Regional Information Technology and Engineering Summit 2026' },
+  { id: 1, title: 'Experience 1', image: '/JulianaAPeralta/Exp1.jpg', desc: '#EXPERIENCE 1 - First Pin and Hard Hat! First Batch' },
+  { id: 2, title: 'Experience 2', image: '/JulianaAPeralta/Exp2.jpg', desc: '#EXPERIENCE 2 - On the Job Training in Mandaluyong, Picture with our supervisor' },
+  { id: 3, title: 'Experience 3', image: '/JulianaAPeralta/Exp3.jpg', desc: '#EXPERIENCE 3 - Wireframing, UI/UX, #OJT' },
+  { id: 4, title: 'Experience 4', image: '/JulianaAPeralta/Exp4.jpg', desc: '#EXPERIENCE 4 - NC2 Training 2026' },
+  { id: 5, title: 'Experience 5', image: '/JulianaAPeralta/Exp5.jpg', desc: '#EXPERIENCE 5 - Regional Information Technology and Engineering Summit 2026' },
 ])
 </script>
 
