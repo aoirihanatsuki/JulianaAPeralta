@@ -1,30 +1,33 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const base = import.meta.env.BASE_URL
+// Helper function to dynamically resolve public assets for Vite
+const getImageUrl = (name: string) => {
+  return new URL(`/${name}`, import.meta.url).href
+}
 
 const certificates = ref([
-  { id: 1, title: 'Certificate 1', image: '/JulianaAPeralta/Cer1.jpg', desc: '#CERTIFICATE 1 - 2025 International Conference.' },
-  { id: 2, title: 'Certificate 2', image: '/JulianaAPeralta/Cer2.jpg', desc: '#CERTIFICATE 2 - 2025 International Conference.' },
-  { id: 3, title: 'Certificate 3', image: '/JulianaAPeralta/Cer3.jpg', desc: '#CERTIFICATE 3 - 2025 International Conference.' },
-  { id: 4, title: 'Certificate 4', image: '/JulianaAPeralta/Cer4.jpg', desc: '#CERTIFICATE 4 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
-  { id: 5, title: 'Certificate 5', image: '/JulianaAPeralta/Cer5.jpg', desc: '#CERTIFICATE 5 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
-  { id: 6, title: 'Certificate 6', image: '/JulianaAPeralta/Cer6.jpg', desc: '#CERTIFICATE 6 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
-  { id: 7, title: 'Certificate 7', image: '/JulianaAPeralta/Cer7.jpg', desc: '#CERTIFICATE 7 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
-  { id: 8, title: 'Certificate 8', image: '/JulianaAPeralta/Cer8.jpg', desc: '#CERTIFICATE 8 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
-  { id: 9, title: 'Certificate 9', image: '/JulianaAPeralta/Cer9.jpg', desc: '#CERTIFICATE 9 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
-  { id: 10, title: 'Certificate 10', image: '/JulianaAPeralta/Cer10.jpg', desc: '#CERTIFICATE 10 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
-  { id: 11, title: 'Certificate 11', image: '/JulianaAPeralta/Cer11.jpg', desc: '#CERTIFICATE 11 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
-  { id: 12, title: 'Certificate 12', image: '/JulianaAPeralta/Cer12.jpg', desc: '#CERTIFICATE 12 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
-  { id: 13, title: 'Certificate 13', image: '/JulianaAPeralta/Cer13.jpg', desc: '#CERTIFICATE 13 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
+  { id: 1, title: 'Certificate 1', image: 'Cer1.jpg', desc: '#CERTIFICATE 1 - 2025 International Conference.' },
+  { id: 2, title: 'Certificate 2', image: 'Cer2.jpg', desc: '#CERTIFICATE 2 - 2025 International Conference.' },
+  { id: 3, title: 'Certificate 3', image: 'Cer3.jpg', desc: '#CERTIFICATE 3 - 2025 International Conference.' },
+  { id: 4, title: 'Certificate 4', image: 'Cer4.jpg', desc: '#CERTIFICATE 4 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
+  { id: 5, title: 'Certificate 5', image: 'Cer5.jpg', desc: '#CERTIFICATE 5 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
+  { id: 6, title: 'Certificate 6', image: 'Cer6.jpg', desc: '#CERTIFICATE 6 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
+  { id: 7, title: 'Certificate 7', image: 'Cer7.jpg', desc: '#CERTIFICATE 7 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
+  { id: 8, title: 'Certificate 8', image: 'Cer8.jpg', desc: '#CERTIFICATE 8 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
+  { id: 9, title: 'Certificate 9', image: 'Cer9.jpg', desc: '#CERTIFICATE 9 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
+  { id: 10, title: 'Certificate 10', image: 'Cer10.jpg', desc: '#CERTIFICATE 10 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
+  { id: 11, title: 'Certificate 11', image: 'Cer11.jpg', desc: '#CERTIFICATE 11 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
+  { id: 12, title: 'Certificate 12', image: 'Cer12.jpg', desc: '#CERTIFICATE 12 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
+  { id: 13, title: 'Certificate 13', image: 'Cer13.jpg', desc: '#CERTIFICATE 13 - TALAKTECH SERIES: PAGTALAKAY SA MAKABAGONG TEKNOLOHIYA 2025.' },
 ])
 
 const experiences = ref([
-  { id: 1, title: 'Experience 1', image: '/JulianaAPeralta/Exp1.jpg', desc: '#EXPERIENCE 1 - First Pin and Hard Hat! First Batch' },
-  { id: 2, title: 'Experience 2', image: '/JulianaAPeralta/Exp2.jpg', desc: '#EXPERIENCE 2 - On the Job Training in Mandaluyong, Picture with our supervisor' },
-  { id: 3, title: 'Experience 3', image: '/JulianaAPeralta/Exp3.jpg', desc: '#EXPERIENCE 3 - Wireframing, UI/UX, #OJT' },
-  { id: 4, title: 'Experience 4', image: '/JulianaAPeralta/Exp4.jpg', desc: '#EXPERIENCE 4 - NC2 Training 2026' },
-  { id: 5, title: 'Experience 5', image: '/JulianaAPeralta/Exp5.jpg', desc: '#EXPERIENCE 5 - Regional Information Technology and Engineering Summit 2026' },
+  { id: 1, title: 'Experience 1', image: 'Exp1.jpg', desc: '#EXPERIENCE 1 - First Pin and Hard Hat! First Batch' },
+  { id: 2, title: 'Experience 2', image: 'Exp2.jpg', desc: '#EXPERIENCE 2 - On the Job Training in Mandaluyong, Picture with our supervisor' },
+  { id: 3, title: 'Experience 3', image: 'Exp3.jpg', desc: '#EXPERIENCE 3 - Wireframing, UI/UX, #OJT' },
+  { id: 4, title: 'Experience 4', image: 'Exp4.jpg', desc: '#EXPERIENCE 4 - NC2 Training 2026' },
+  { id: 5, title: 'Experience 5', image: 'Exp5.jpg', desc: '#EXPERIENCE 5 - Regional Information Technology and Engineering Summit 2026' },
 ])
 </script>
 
@@ -33,10 +36,10 @@ const experiences = ref([
     <!-- Hero Section / Profile -->
     <section class="hero-section">
       <div class="profile-card">
-        <img :src="`${base}pfp.jpg`" alt="Juliana Francesca A. Peralta" class="profile-img" />
+        <img src="/pfp.jpg" alt="Juliana Francesca A. Peralta" class="profile-img" />
         <h1>Juliana Francesca A. Peralta</h1>
         <p class="tagline">Frontend Developer & UI/UX Enthusiast</p>
-        <a :href="`${base}cv.pdf`" download="Juliana_Peralta_CV.pdf" class="resume-action-btn">Download CV</a>
+        <a href="/cv.pdf" download="Juliana_Peralta_CV.pdf" class="resume-action-btn">Download CV</a>
       </div>
     </section>
 
@@ -46,7 +49,8 @@ const experiences = ref([
       <div class="grid-container">
         <div v-for="cert in certificates" :key="cert.id" class="card">
           <h3>{{ cert.title }}</h3>
-          <img :src="cert.image" :alt="cert.title" class="content-img" />
+          <!-- Using getImageUrl helper so Vite maps paths correctly in loops -->
+          <img :src="getImageUrl(cert.image)" :alt="cert.title" class="content-img" />
           <p class="caption">{{ cert.desc }}</p>
         </div>
       </div>
@@ -58,7 +62,7 @@ const experiences = ref([
       <div class="grid-container">
         <div v-for="exp in experiences" :key="exp.id" class="card">
           <h3>{{ exp.title }}</h3>
-          <img :src="exp.image" :alt="exp.title" class="content-img" />
+          <img :src="getImageUrl(exp.image)" :alt="exp.title" class="content-img" />
           <p class="caption">{{ exp.desc }}</p>
         </div>
       </div>
@@ -74,12 +78,10 @@ const experiences = ref([
   font-family: Arial, sans-serif;
   color: #333333;
 }
-
 .hero-section {
   text-align: center;
   margin-bottom: 3rem;
 }
-
 .profile-card {
   background-color: #ffffff;
   border: 2px solid #8a2be2;
@@ -87,7 +89,6 @@ const experiences = ref([
   padding: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
-
 .profile-img {
   width: 150px;
   height: 150px;
@@ -96,18 +97,15 @@ const experiences = ref([
   margin-bottom: 1rem;
   border: 3px solid #8a2be2;
 }
-
 h1 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
 }
-
 .tagline {
   font-size: 1.1rem;
   color: #666666;
   margin-bottom: 1.5rem;
 }
-
 .resume-action-btn {
   display: inline-block;
   background-color: #8a2be2;
@@ -118,28 +116,23 @@ h1 {
   font-weight: bold;
   transition: background-color 0.2s;
 }
-
 .resume-action-btn:hover {
   background-color: #5c1d96;
 }
-
 .section-block {
   margin-bottom: 3rem;
 }
-
 .section-block h2 {
   text-align: center;
   margin-bottom: 1.5rem;
   font-size: 1.8rem;
   color: #8a2be2;
 }
-
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
-
 .card {
   background: #ffffff;
   border: 1px solid #ddd;
@@ -148,12 +141,10 @@ h1 {
   text-align: center;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
-
 .card h3 {
   font-size: 1.1rem;
   margin-bottom: 0.75rem;
 }
-
 .content-img {
   width: 100%;
   height: 180px;
@@ -162,7 +153,6 @@ h1 {
   margin-bottom: 0.75rem;
   background-color: #f0f0f0;
 }
-
 .caption {
   font-size: 0.9rem;
   color: #555555;
