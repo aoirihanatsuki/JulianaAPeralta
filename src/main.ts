@@ -45,7 +45,7 @@ const certificates: Post[] = certificateCaptions.map(
     (caption, index) => ({
         id: index + 1,
         kind: "certificate",
-        image: `cert1.jpg`,
+        image: `/cer${index + 1}.jpg`,
         caption: caption,
         likes: index === 0 ? 42 : index === 1 ? 89 : 0
     })
@@ -55,7 +55,7 @@ const experiences: Post[] = experienceCaptions.map(
     (caption, index) => ({
         id: index + 1,
         kind: "experience",
-        image: `/Exp${index + 1}.jpg`,
+        image: `/exp${index + 1}.jpg`,
         caption: caption,
         likes: 0
     })
