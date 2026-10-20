@@ -45,7 +45,7 @@ const certificates: Post[] = certificateCaptions.map(
     (caption, index) => ({
         id: index + 1,
         kind: "certificate",
-        image: `/Cer${index + 1}.jpg`,
+        image: `cert1.jpg`,
         caption: caption,
         likes: index === 0 ? 42 : index === 1 ? 89 : 0
     })
