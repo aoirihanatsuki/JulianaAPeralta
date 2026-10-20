@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-// This automatically pulls '/JulianaAPeralta/' during GitHub Pages builds
 const base = import.meta.env.BASE_URL
 
 const certificates = ref([
